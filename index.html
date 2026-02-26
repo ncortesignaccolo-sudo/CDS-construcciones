@@ -3,37 +3,37 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CDS Construcciones — Linares</title>
-  <meta name="description" content="CDS Construcciones en Linares. Reformas, construcción y presupuestos claros. Profesionales serios, cercanos y recomendados." />
-  <meta name="theme-color" content="#0b1020" />
+  <title>CDS Construcciones — Reformas y construcción en Linares</title>
+  <meta name="description" content="CDS Construcciones en Linares (Jaén). Reformas, construcción y presupuestos claros. Trabajo serio, plazos acordados y trato cercano." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- Barra demo (opcional) -->
+  <!-- Demo strip -->
   <div class="demo-strip" id="demoStrip">
-    <div class="container demo-strip__inner">
+    <div class="wrap demo-strip__inner">
       <span class="pill">Propuesta visual</span>
       <span class="demo-strip__text">Demostración de cómo podría verse tu negocio online (contenido editable).</span>
       <button class="icon-btn" id="closeDemo" aria-label="Cerrar">✕</button>
     </div>
   </div>
 
-  <!-- Header fijo -->
+  <!-- Header -->
   <header class="site-header" id="top">
-    <div class="container header-inner">
+    <div class="wrap header-inner">
       <a class="brand" href="#top" aria-label="Ir al inicio">
-        <span class="brand__icon" aria-hidden="true">🏗️</span>
+        <span class="brand__mark" aria-hidden="true">CDS</span>
         <span class="brand__text">
           <strong>CDS Construcciones</strong>
           <small>Linares · Jaén</small>
         </span>
       </a>
 
-      <nav class="nav" id="nav" aria-label="Navegación">
+      <nav class="nav" id="nav">
         <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
         <a href="#resenas">Reseñas</a>
-        <a href="#horario">Horario</a>
+        <a href="#proceso">Proceso</a>
         <a href="#contacto">Contacto</a>
       </nav>
 
@@ -41,37 +41,38 @@
         <a class="btn btn-ghost" href="tel:953813959">Llamar</a>
         <a class="btn btn-main" target="_blank" rel="noopener"
            href="https://www.google.com/maps/search/?api=1&query=Av.%20San%20Sebasti%C3%A1n%2C%207%2C%2023700%20Linares%2C%20Ja%C3%A9n">
-          Cómo llegar
+          Ver en Maps
         </a>
-
         <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">☰</button>
       </div>
     </div>
 
-    <!-- Menú móvil -->
-    <div class="container mobile-nav" id="mobileNav" aria-hidden="true">
+    <!-- Mobile nav -->
+    <div class="wrap mobile-nav" id="mobileNav" aria-hidden="true">
       <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
       <a href="#resenas">Reseñas</a>
-      <a href="#horario">Horario</a>
+      <a href="#proceso">Proceso</a>
       <a href="#contacto">Contacto</a>
     </div>
   </header>
 
   <main>
-    <!-- HERO -->
+    <!-- HERO (estructura distinta: 2 columnas + banda inferior) -->
     <section class="hero">
       <div class="hero-bg" aria-hidden="true"></div>
 
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <div class="tagline">
-            <span class="tag">Reformas · Construcción</span>
-            <span class="tag tag--soft">Presupuesto claro</span>
+      <div class="wrap hero-grid">
+        <div class="hero-left reveal">
+          <div class="chips">
+            <span class="chip">Reformas</span>
+            <span class="chip chip--soft">Construcción</span>
+            <span class="chip chip--accent">Presupuesto claro</span>
           </div>
 
           <h1>
-            Construcciones y reformas<br />
-            con trato serio y cercano
+            Reformas y construcción<br />
+            <span class="accent">con trabajo serio</span> y trato cercano
           </h1>
 
           <p class="lead">
@@ -84,168 +85,227 @@
             <a class="btn btn-ghost" href="#contacto">Pedir presupuesto</a>
           </div>
 
-          <div class="mini-badges">
-            <span class="mini">✅ Trabajo serio</span>
-            <span class="mini">🧱 Todo tipo de obra</span>
-            <span class="mini">⏱️ Plazos acordados</span>
+          <div class="trust-row">
+            <div class="trust">
+              <span class="trust-ico" aria-hidden="true">✅</span>
+              <div>
+                <div class="trust-t">Trabajo serio</div>
+                <div class="trust-s">Cumplimiento y limpieza</div>
+              </div>
+            </div>
+
+            <div class="trust">
+              <span class="trust-ico" aria-hidden="true">🧱</span>
+              <div>
+                <div class="trust-t">Todo tipo de obra</div>
+                <div class="trust-s">Reformas y construcción</div>
+              </div>
+            </div>
+
+            <div class="trust">
+              <span class="trust-ico" aria-hidden="true">🕒</span>
+              <div>
+                <div class="trust-t">Plazos acordados</div>
+                <div class="trust-s">Sin sorpresas</div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Tarjeta lateral -->
-        <aside class="hero-card reveal" aria-label="Información rápida">
-          <div class="status">
-            <span class="dot" id="dot"></span>
-            <strong id="estado">Horario de oficina</strong>
-            <span class="muted" id="estadoSub">Lunes a viernes</span>
-          </div>
-
-          <div class="info-grid">
-            <div class="info-row">
-              <span class="k">Dirección</span>
-              <span class="v">Av. San Sebastián, 7 · 23700 Linares (Jaén)</span>
-            </div>
-            <div class="info-row">
-              <span class="k">Teléfono</span>
-              <a class="v link" href="tel:953813959">953 81 39 59</a>
-            </div>
-            <div class="info-row">
-              <span class="k">Servicios</span>
-              <span class="v">Reformas · Construcción · Presupuestos</span>
-            </div>
-          </div>
-
-          <div class="note hours-box">
-            <strong>Horario</strong>
-
-            <div class="hrow-mini">
-              <span>Lunes – Viernes</span>
-              <span>8:00–18:00</span>
+        <aside class="hero-right reveal">
+          <div class="glass-card">
+            <div class="status">
+              <span class="dot" id="dot"></span>
+              <strong id="estado">Horario de oficina</strong>
+              <span class="muted" id="estadoSub">Lunes a viernes</span>
             </div>
 
-            <div class="hrow-mini">
-              <span>Sábado</span>
-              <span class="closed">Cerrado</span>
+            <div class="info-list">
+              <div class="info-row">
+                <span class="k">Dirección</span>
+                <span class="v">Av. San Sebastián, 7 · 23700 Linares (Jaén)</span>
+              </div>
+              <div class="info-row">
+                <span class="k">Teléfono</span>
+                <a class="v link" href="tel:953813959">953 81 39 59</a>
+              </div>
+              <div class="info-row">
+                <span class="k">Servicios</span>
+                <span class="v">Reformas · Construcción · Presupuestos</span>
+              </div>
             </div>
 
-            <div class="hrow-mini">
-              <span>Domingo</span>
-              <span class="closed">Cerrado</span>
-            </div>
-          </div>
+            <div class="hours-box">
+              <div class="hours-title">
+                <strong>Horario</strong>
+                <span class="hint">* puede variar</span>
+              </div>
 
-          <div class="hero-card-actions">
-            <a class="btn btn-main btn-wide" href="tel:953813959">Llamar</a>
-            <a class="btn btn-ghost btn-wide" target="_blank" rel="noopener"
-               href="https://www.google.com/maps/search/?api=1&query=Av.%20San%20Sebasti%C3%A1n%2C%207%2C%2023700%20Linares%2C%20Ja%C3%A9n">
-              Ver en Maps
-            </a>
+              <div class="hrow">
+                <span>Lunes – Viernes</span>
+                <span class="hv">8:00–18:00</span>
+              </div>
+              <div class="hrow">
+                <span>Sábado</span>
+                <span class="hv closed">Cerrado</span>
+              </div>
+              <div class="hrow">
+                <span>Domingo</span>
+                <span class="hv closed">Cerrado</span>
+              </div>
+
+              <a class="map-link" target="_blank" rel="noopener"
+                 href="https://www.google.com/maps/search/?api=1&query=Av.%20San%20Sebasti%C3%A1n%2C%207%2C%2023700%20Linares%2C%20Ja%C3%A9n">
+                Abrir ubicación en Google Maps →
+              </a>
+            </div>
+
+            <div class="glass-actions">
+              <a class="btn btn-main btn-wide" href="tel:953813959">Llamar</a>
+              <a class="btn btn-ghost btn-wide" href="#proceso">Ver proceso</a>
+            </div>
           </div>
         </aside>
       </div>
 
-      <div class="container hero-stats reveal">
-        <div class="stat">
-          <div class="stat__t">Profesionales</div>
-          <div class="stat__s">Gente seria y trabajadora</div>
+      <!-- Banda inferior con “datos rápidos” -->
+      <div class="wrap hero-band reveal">
+        <div class="band-card">
+          <div class="band-k">Respuesta rápida</div>
+          <div class="band-v">Te damos una idea y presupuesto orientativo sin mareos.</div>
         </div>
-        <div class="stat">
-          <div class="stat__t">Presupuesto claro</div>
-          <div class="stat__s">Respetan el precio acordado</div>
+        <div class="band-card">
+          <div class="band-k">Presupuesto por fases</div>
+          <div class="band-v">Pagos claros por avance (si aplica).</div>
         </div>
-        <div class="stat">
-          <div class="stat__t">Recomendados</div>
-          <div class="stat__s">Trato cercano y de 10</div>
+        <div class="band-card">
+          <div class="band-k">Recomendados</div>
+          <div class="band-v">Clientes destacan trato cercano y profesionalidad.</div>
         </div>
       </div>
     </section>
 
     <!-- SERVICIOS -->
     <section class="section" id="servicios">
-      <div class="container">
+      <div class="wrap">
         <div class="section-head reveal">
           <h2>Servicios</h2>
-          <p class="muted">Para que el cliente entienda rápido qué hacéis y en qué podéis ayudar.</p>
+          <p class="muted">Lo esencial, explicado claro. Sin texto relleno.</p>
         </div>
 
-        <div class="cards-3">
+        <div class="grid-3">
           <article class="card reveal">
             <h3>Reformas</h3>
-            <p class="muted">Reforma de vivienda, local o espacios concretos con planificación clara.</p>
+            <p class="muted">Baños, cocinas, viviendas, locales. Acabados limpios.</p>
             <ul class="list">
-              <li>Baños, cocinas, suelos, pintura</li>
-              <li>Acabados limpios y detalles</li>
-              <li>Seguimiento del trabajo</li>
+              <li>Planificación por fases</li>
+              <li>Materiales y opciones</li>
+              <li>Plazos acordados</li>
             </ul>
           </article>
 
           <article class="card reveal">
             <h3>Construcción</h3>
-            <p class="muted">Obra nueva, ampliaciones y trabajos estructurales.</p>
+            <p class="muted">Obra nueva y ampliaciones con seguimiento.</p>
             <ul class="list">
-              <li>Albañilería y estructura</li>
               <li>Coordinación de gremios</li>
-              <li>Seriedad y cumplimiento</li>
+              <li>Control de calidad</li>
+              <li>Entrega ordenada</li>
             </ul>
           </article>
 
           <article class="card reveal">
             <h3>Presupuestos</h3>
-            <p class="muted">Explicación clara del trabajo y del coste, sin sorpresas.</p>
+            <p class="muted">Explican todo con claridad y se ajustan al acordado.</p>
             <ul class="list">
-              <li>Presupuesto detallado</li>
-              <li>Plazos estimados</li>
-              <li>Comunicación directa</li>
+              <li>Visita / medición</li>
+              <li>Propuesta por partidas</li>
+              <li>Revisión si cambian necesidades</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- PROYECTOS (estructura distinta: timeline/galería mock) -->
+    <section class="section section--alt" id="proyectos">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2>Proyectos</h2>
+          <p class="muted">Esta sección se puede convertir en galería real con fotos de obras.</p>
+        </div>
+
+        <div class="projects">
+          <article class="project reveal">
+            <div class="project__tag">Reforma</div>
+            <h3>Reforma integral (ejemplo)</h3>
+            <p class="muted">Redistribución, acabados, coordinación y entrega en plazo.</p>
+            <div class="project__meta">
+              <span>✔ Limpieza</span><span>✔ Explicación clara</span><span>✔ Presupuesto respetado</span>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__tag project__tag--accent">Construcción</div>
+            <h3>Obra nueva / ampliación (ejemplo)</h3>
+            <p class="muted">Seguimiento del avance y entregas por fases.</p>
+            <div class="project__meta">
+              <span>✔ Plazos</span><span>✔ Coordinación</span><span>✔ Control de calidad</span>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__tag project__tag--soft">Presupuesto</div>
+            <h3>Presupuesto por partidas (ejemplo)</h3>
+            <p class="muted">Transparencia para que el cliente sepa qué está pagando.</p>
+            <div class="project__meta">
+              <span>✔ Claridad</span><span>✔ Sin sorpresas</span><span>✔ Ajustes si cambian necesidades</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- RESEÑAS -->
-    <section class="section section--alt" id="resenas">
-      <div class="container">
+    <section class="section" id="resenas">
+      <div class="wrap">
         <div class="section-head reveal">
           <h2>Reseñas</h2>
-          <p class="muted">Confianza real: opiniones que transmiten profesionalidad.</p>
+          <p class="muted">Prueba social: confianza real (extractos editables).</p>
         </div>
 
         <div class="reviews">
           <article class="review reveal">
             <div class="review__top">
-              <strong>Ismael Sánchez</strong>
-              <span class="stars">★★★★★</span>
+              <strong>Ismael Sánchez</strong><span class="stars">★★★★★</span>
             </div>
             <p>“Muy profesionales en todo lo que hacen. Gente muy seria y trabajadora.”</p>
           </article>
 
           <article class="review reveal">
             <div class="review__top">
-              <strong>Frank Blanco</strong>
-              <span class="stars">★★★★★</span>
+              <strong>Frank Blanco</strong><span class="stars">★★★★★</span>
             </div>
-            <p>“Les pedí presupuesto para una reforma… respetaron el tiempo estimado y el presupuesto inicial.”</p>
+            <p>“Grandes profesionales… respetaron el tiempo estimado y el presupuesto inicial.”</p>
           </article>
 
           <article class="review reveal">
             <div class="review__top">
-              <strong>Gloria García</strong>
-              <span class="stars">★★★★★</span>
+              <strong>Gloria García</strong><span class="stars">★★★★★</span>
             </div>
             <p>“Recomendable 100%, responsables y cumplieron con la fecha prevista.”</p>
           </article>
 
           <article class="review reveal">
             <div class="review__top">
-              <strong>Adolfo Orzaes</strong>
-              <span class="stars">★★★★★</span>
+              <strong>Adolfo Orzaes</strong><span class="stars">★★★★★</span>
             </div>
             <p>“Grandes profesionales del sector.”</p>
           </article>
 
           <article class="review reveal">
             <div class="review__top">
-              <strong>adritron</strong>
-              <span class="stars">★★★★★</span>
+              <strong>adritron</strong><span class="stars">★★★★★</span>
             </div>
             <p>“Calidad de servicio top.”</p>
           </article>
@@ -253,55 +313,66 @@
       </div>
     </section>
 
-    <!-- HORARIO -->
-    <section class="section" id="horario">
-      <div class="container">
+    <!-- PROCESO -->
+    <section class="section section--alt" id="proceso">
+      <div class="wrap">
         <div class="section-head reveal">
-          <h2>Horario</h2>
-          <p class="muted">Horario de atención (puede variar según obras y disponibilidad).</p>
+          <h2>Proceso de trabajo</h2>
+          <p class="muted">Esto da mucha confianza (y convierte mejor).</p>
         </div>
 
-        <div class="card reveal hours-card">
-          <div class="hours">
-            <div class="row"><span>Lunes</span><span>8:00–18:00</span></div>
-            <div class="row"><span>Martes</span><span>8:00–18:00</span></div>
-            <div class="row"><span>Miércoles</span><span>8:00–18:00</span></div>
-            <div class="row"><span>Jueves</span><span>8:00–18:00</span></div>
-            <div class="row"><span>Viernes</span><span>8:00–18:00</span></div>
-            <div class="row"><span>Sábado</span><span class="closed">Cerrado</span></div>
-            <div class="row"><span>Domingo</span><span class="closed">Cerrado</span></div>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step__n">1</div>
+            <div>
+              <h3>Contacto y idea</h3>
+              <p class="muted">Nos cuentas lo que necesitas y te orientamos.</p>
+            </div>
           </div>
 
-          <div class="hours-actions">
-            <a class="btn btn-main" href="tel:953813959">Llamar</a>
-            <a class="btn btn-ghost" target="_blank" rel="noopener"
-               href="https://www.google.com/maps/search/?api=1&query=Av.%20San%20Sebasti%C3%A1n%2C%207%2C%2023700%20Linares%2C%20Ja%C3%A9n">
-              Ver ubicación
-            </a>
+          <div class="step reveal">
+            <div class="step__n">2</div>
+            <div>
+              <h3>Visita / medición</h3>
+              <p class="muted">Tomamos medidas y definimos alcance y materiales.</p>
+            </div>
+          </div>
+
+          <div class="step reveal">
+            <div class="step__n">3</div>
+            <div>
+              <h3>Presupuesto claro</h3>
+              <p class="muted">Propuesta por partidas y plazos acordados.</p>
+            </div>
+          </div>
+
+          <div class="step reveal">
+            <div class="step__n">4</div>
+            <div>
+              <h3>Ejecución y entrega</h3>
+              <p class="muted">Seguimiento, orden y entrega final.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CONTACTO -->
-    <section class="section section--alt" id="contacto">
-      <div class="container">
+    <section class="section" id="contacto">
+      <div class="wrap">
         <div class="cta reveal">
           <div>
-            <h2>Contacto</h2>
-            <p class="muted">Si quieres presupuesto o resolver una duda, llámanos y te informamos.</p>
-
-            <div class="contact-lines">
-              <div><strong>Dirección:</strong> Av. San Sebastián, 7, 23700 Linares, Jaén</div>
-              <div><strong>Teléfono:</strong> <a class="link" href="tel:953813959">953 81 39 59</a></div>
-            </div>
+            <h2>¿Hablamos?</h2>
+            <p class="muted">
+              Si quieres, lo vemos por teléfono y te indicamos los siguientes pasos.
+              (Esta web es demo y se adapta totalmente al negocio.)
+            </p>
           </div>
-
           <div class="cta-actions">
-            <a class="btn btn-main" href="tel:953813959">Llamar ahora</a>
+            <a class="btn btn-main" href="tel:953813959">Llamar: 953 81 39 59</a>
             <a class="btn btn-ghost" target="_blank" rel="noopener"
                href="https://www.google.com/maps/search/?api=1&query=Av.%20San%20Sebasti%C3%A1n%2C%207%2C%2023700%20Linares%2C%20Ja%C3%A9n">
-              Cómo llegar
+              Ver ubicación
             </a>
           </div>
         </div>
@@ -317,4 +388,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
