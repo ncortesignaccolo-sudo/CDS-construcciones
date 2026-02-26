@@ -537,3 +537,14 @@ a:hover,
 .right-grid {
   align-items: stretch;
 }
+/* Enlaces tipo "Ver detalles" (quita el azul por defecto) */
+.link-cta{
+  color: #d7f36a;              /* verde-lima como tu acento */
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(215,243,106,.22);
+}
+.link-cta:hover{
+  color: #ffffff;
+  text-shadow: 0 0 14px rgba(215,243,106,.35);
+}
