@@ -483,3 +483,57 @@ h1{
   .stack{grid-template-columns: 1fr}
   .contact{grid-template-columns: 1fr}
 }
+/* Links que salen en azul claro (ej: "Ver detalles →") */
+a,
+.card a,
+.cards a,
+.link,
+.more-link {
+  color: #B8FF4D;              /* verde-lima */
+  text-decoration: none;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(184, 255, 77, .18);
+}
+
+a:hover,
+.card a:hover,
+.cards a:hover,
+.link:hover,
+.more-link:hover {
+  color: #E9FFB5;
+  text-shadow: 0 0 14px rgba(184, 255, 77, .30);
+}
+/* Evita que tarjetas se corten por altura/overflow */
+.card,
+.tile,
+.panel,
+.glass-card {
+  height: auto !important;
+  overflow: visible;
+}
+
+/* Si tu tarjeta Horario tiene algún id o clase, esto la hace más alta */
+#horario,
+.horario,
+.hours-card,
+.card-horario {
+  min-height: 220px;
+}
+
+/* Filas del horario: que respiren y no se “aplasten” */
+#horario .row,
+.horario .row,
+.hours-card .row,
+.card-horario .row,
+.hrow-mini {
+  padding: 10px 14px;
+  gap: 12px;
+}
+
+/* Por si el grid la está encogiendo */
+.grid,
+.cards,
+.hero-right,
+.right-grid {
+  align-items: stretch;
+}
