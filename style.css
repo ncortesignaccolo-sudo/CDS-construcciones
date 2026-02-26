@@ -548,3 +548,20 @@ a:hover,
   color: #ffffff;
   text-shadow: 0 0 14px rgba(215,243,106,.35);
 }
+/* Horario: que no se corte y tenga más aire */
+.horario-card{
+  min-height: 220px;
+  height: auto;
+  overflow: visible;
+  padding-bottom: 18px;
+}
+
+/* Si tu grid está “apretando” las tarjetas, esto ayuda */
+.right-grid, .hero-grid, .cards-grid{
+  align-items: stretch;
+}
+
+/* Si alguna tarjeta tiene overflow hidden global y te recorta contenido */
+.tile{
+  overflow: visible;
+}
