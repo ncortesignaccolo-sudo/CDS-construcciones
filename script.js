@@ -1,40 +1,45 @@
-// CDS Construcciones — script.js
-
 // Close demo strip
-const closeDemo = document.getElementById("closeDemo");
 const demoStrip = document.getElementById("demoStrip");
+const closeDemo = document.getElementById("closeDemo");
 if (closeDemo && demoStrip) {
-  closeDemo.addEventListener("click", () => {
-    demoStrip.style.display = "none";
-  });
+  closeDemo.addEventListener("click", () => demoStrip.remove());
 }
 
 // Mobile menu
 const burger = document.getElementById("burger");
 const mobileNav = document.getElementById("mobileNav");
+
 if (burger && mobileNav) {
   burger.addEventListener("click", () => {
-    const isOpen = mobileNav.classList.toggle("open");
-    burger.setAttribute("aria-expanded", isOpen ? "true" : "false");
-    mobileNav.setAttribute("aria-hidden", isOpen ? "false" : "true");
+    const expanded = burger.getAttribute("aria-expanded") === "true";
+    burger.setAttribute("aria-expanded", String(!expanded));
+    mobileNav.setAttribute("aria-hidden", String(expanded));
+    mobileNav.style.display = expanded ? "none" : "block";
   });
 
-  // close menu on click
+  // auto close on click
   mobileNav.querySelectorAll("a").forEach(a => {
     a.addEventListener("click", () => {
-      mobileNav.classList.remove("open");
       burger.setAttribute("aria-expanded", "false");
       mobileNav.setAttribute("aria-hidden", "true");
+      mobileNav.style.display = "none";
     });
   });
 }
 
 // Reveal on scroll
-const reveals = Array.from(document.querySelectorAll(".reveal"));
-const io = new IntersectionObserver((entries) => {
+const obs = new IntersectionObserver((entries) => {
   entries.forEach(e => {
-    if (e.isIntersecting) e.target.classList.add("show");
+    if (e.isIntersecting) e.target.classList.add("is-visible");
   });
 }, { threshold: 0.12 });
 
-reveals.forEach(el => io.observe(el));
+document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
+
+// Optional: status dot (green) always on, but you can change text easily here
+const estado = document.getElementById("estado");
+const estadoSub = document.getElementById("estadoSub");
+if (estado && estadoSub) {
+  estado.textContent = "Horario de oficina";
+  estadoSub.textContent = "Lunes a viernes";
+}
