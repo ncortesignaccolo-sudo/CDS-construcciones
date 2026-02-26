@@ -1,45 +1,31 @@
-// Close demo strip
-const demoStrip = document.getElementById("demoStrip");
+// demo close
+const demoBar = document.getElementById("demoBar");
 const closeDemo = document.getElementById("closeDemo");
-if (closeDemo && demoStrip) {
-  closeDemo.addEventListener("click", () => demoStrip.remove());
-}
+if (demoBar && closeDemo) closeDemo.addEventListener("click", () => demoBar.remove());
 
-// Mobile menu
+// mobile menu
 const burger = document.getElementById("burger");
-const mobileNav = document.getElementById("mobileNav");
-
-if (burger && mobileNav) {
+const mobile = document.getElementById("mobile");
+if (burger && mobile) {
+  mobile.style.display = "none";
   burger.addEventListener("click", () => {
-    const expanded = burger.getAttribute("aria-expanded") === "true";
-    burger.setAttribute("aria-expanded", String(!expanded));
-    mobileNav.setAttribute("aria-hidden", String(expanded));
-    mobileNav.style.display = expanded ? "none" : "block";
+    const open = burger.getAttribute("aria-expanded") === "true";
+    burger.setAttribute("aria-expanded", String(!open));
+    mobile.setAttribute("aria-hidden", String(open));
+    mobile.style.display = open ? "none" : "block";
   });
-
-  // auto close on click
-  mobileNav.querySelectorAll("a").forEach(a => {
-    a.addEventListener("click", () => {
-      burger.setAttribute("aria-expanded", "false");
-      mobileNav.setAttribute("aria-hidden", "true");
-      mobileNav.style.display = "none";
-    });
-  });
+  mobile.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+    burger.setAttribute("aria-expanded", "false");
+    mobile.setAttribute("aria-hidden", "true");
+    mobile.style.display = "none";
+  }));
 }
 
-// Reveal on scroll
-const obs = new IntersectionObserver((entries) => {
+// reveal
+const io = new IntersectionObserver((entries) => {
   entries.forEach(e => {
-    if (e.isIntersecting) e.target.classList.add("is-visible");
+    if (e.isIntersecting) e.target.classList.add("is");
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
-
-// Optional: status dot (green) always on, but you can change text easily here
-const estado = document.getElementById("estado");
-const estadoSub = document.getElementById("estadoSub");
-if (estado && estadoSub) {
-  estado.textContent = "Horario de oficina";
-  estadoSub.textContent = "Lunes a viernes";
-}
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
