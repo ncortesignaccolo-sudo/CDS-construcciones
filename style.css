@@ -517,9 +517,10 @@ a:hover,
 .horario,
 .hours-card,
 .card-horario {
+  height: auto;
   min-height: 220px;
+  overflow: visible;
 }
-
 /* Filas del horario: que respiren y no se “aplasten” */
 #horario .row,
 .horario .row,
@@ -535,7 +536,8 @@ a:hover,
 .cards,
 .hero-right,
 .right-grid {
-  align-items: stretch;
+  align-items: start;
+  overflow: visible;
 }
 /* Enlaces tipo "Ver detalles" (quita el azul por defecto) */
 .link-cta{
