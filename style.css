@@ -567,3 +567,25 @@ a:hover,
 .tile{
   overflow: visible;
 }
+/* 1) La rejilla no debe tener filas de altura fija */
+.bento{
+  align-items: start;
+  grid-auto-rows: minmax(min-content, auto);
+}
+
+/* 2) La tarjeta (tile) debe poder crecer */
+.bento .tile{
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+}
+
+/* 3) Por si algún padre está recortando */
+.hero,
+.hero-grid,
+.hero-right,
+.right-grid,
+.grid,
+.cards{
+  overflow: visible;
+}
